@@ -1,0 +1,18 @@
+.btn {
+  cursor: pointer;
+
+  padding: 0.75em;
+  background-color: inherit;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75em;
+}
+
+.btn-dark {
+  color: white;
+  background-color: #111727;
+}

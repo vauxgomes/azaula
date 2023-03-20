@@ -1,0 +1,19 @@
+/* Text divider */
+
+.text-divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1em;
+
+  font-size: small;
+}
+
+.text-divider::before,
+.text-divider::after {
+  content: '';
+  height: 1px;
+  width: 10px;
+  background-color: var(--line);
+  flex-grow: 1;
+}

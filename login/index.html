@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Box Icons 2.x.x -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link href="./style.css" rel="stylesheet" />
+
+    <!-- Title -->
+    <title>Login</title>
+  </head>
+  <body>
+    <div id="login-page">
+      <div class="logo">
+        <i class="bx bxs-lemon"></i>
+        Azaula
+      </div>
+
+      <!-- Left Side -->
+      <main>
+        <div>
+          <h2>Welcome back, Vaux</h2>
+          <p>Welcome back! Please enter your details</p>
+        </div>
+
+        <button class="btn">
+          <i class="bx bxl-google bx-xs"></i> Log in with Google
+        </button>
+
+        <div class="text-divider">or</div>
+
+        <form>
+          <input type="text" class="form-control mb-3" placeholder="Email" />
+          <input type="text" class="form-control mb-3" placeholder="Password" />
+
+          <div class="form-control-check">
+            <input type="checkbox" id="checkbox" />
+            <label class="form-label" for="checkbox"
+              >Remember for 30 days</label
+            >
+          </div>
+
+          <button class="btn btn-dark">Log in</button>
+          
+          <hr />
+          
+          <button class="btn">Create an account</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+.form-control {
+  display: block;
+  width: 100%;
+
+  padding: 0.9em 0;
+  border-color: var(--line);
+  border-width: 0 0 1px 0;
+
+  outline: none;
+}
+
+.form-label {
+  font-size: small;
+  color: rgb(87, 86, 86);
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+}
