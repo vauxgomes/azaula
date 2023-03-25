@@ -1,0 +1,121 @@
+/* https://dribbble.com/shots/20483482-Invest-Website-Design-business-landing-web-page-site-designer */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Colors */
+
+.gold {
+  --bg-color: #8211c1;
+  --flag: #fff;
+  --number: #a4a6aa;
+}
+
+.platinum {
+  --bg-color: #a68957;
+  --flag: #fff;
+  --number: #a4a6aa;
+}
+
+.black {
+  --bg-color: #010101;
+  --flag: #fff;
+  --number: #a4a6aa;
+}
+
+/* Cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+
+  padding: 1em;
+}
+
+.card {
+  cursor: pointer;
+
+  display: grid;
+  grid-template-columns: min-content auto min-content;
+  grid-template-areas:
+    'frame name chevron'
+    'frame number chevron';
+  align-items: center;
+  gap: 0 1em;
+
+  padding: 0.5em 0.75em 0.5em 0.5em;
+  border-radius: 8px;
+}
+
+.card > .frame {
+  grid-area: frame;
+  position: relative;
+
+  width: 70px;
+  height: 45px;
+
+  background-color: var(--bg-color);
+  border-radius: 5px;
+}
+
+.card > .frame::before {
+  content: '';
+
+  position: absolute;
+  top: 6px;
+  left: 8px;
+
+  width: 20px;
+  height: 5px;
+
+  background-color: var(--flag);
+}
+
+.card > .frame::after {
+  content: '';
+
+  position: absolute;
+  top: 20px;
+  left: 8px;
+
+  width: 50px;
+
+  /* background-color: #111727; */
+  border-bottom: 3px dashed var(--number);
+}
+
+.card:hover {
+  background-color: #efefef;
+}
+
+.card > strong {
+  grid-area: name;
+  font-weight: 500;
+}
+
+.card > small {
+  grid-area: number;
+  color: #757a86;
+}
+
+.card > .chevron-right {
+  grid-area: chevron;
+
+  width: 6px;
+  height: 6px;
+
+  border-right: 2px solid #e1e1e1;
+  border-bottom: 2px solid #e1e1e1;
+
+  rotate: -45deg;
+}
