@@ -1,0 +1,39 @@
+#flexbox-example {
+  padding: 2em;
+}
+
+#flexbox-example form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  
+  padding: 2em;
+  margin: 2em 0;
+
+  background-color: #fff;
+  border-radius: 8px;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#flexbox-example form div.single {
+  grid-column: 1/3;
+}
+
+#flexbox-example .container {
+  padding: 1em;
+
+  background-color: #eff1f3;
+  border-radius: 0.5em;
+}
+
+#flexbox-example .item {
+  padding: 2em;
+  background-color: #1651ce;
+  border-radius: 0.35em;
+}
+
+/* #flexbox-example .item:nth-child(1) {
+  padding: 2.5em 2em;
+} */
+

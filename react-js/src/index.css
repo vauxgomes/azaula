@@ -10,6 +10,7 @@ body {
   --line: #e1e1e1;
 
   color: #111727;
+  font-size: 18px;
   font-family: 'Roboto', sans-serif;
   background-color: #fffdff;
 }
@@ -23,6 +24,8 @@ hr {
 .form-control {
   display: block;
   width: 100%;
+
+  font-size: medium;
 
   padding: 0.9em 0.5em;
   border-color: var(--line);
