@@ -1,8 +1,7 @@
-import States1 from './examples/states/States1'
-// import States2 from './examples/states/States2'
+import LoginPage from './pages/LoginPage'
 
 function App() {
-  return <States1 />
+  return <LoginPage />
 }
 
 export default App
