@@ -1,7 +1,7 @@
 import './style.css'
 import { useState } from 'react'
 
-export default function LoginForm() {
+export default function LoginForm({ setToken }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [type, setType] = useState('password')
@@ -9,8 +9,9 @@ export default function LoginForm() {
   function handleSubmit(e) {
     e.preventDefault()
 
-    if (email && password === '12345') {
+    if (email && password) {
       alert('Login feito com sucesso')
+      setToken('ok')
     } else {
       alert('Falha no login')
     }
@@ -18,7 +19,7 @@ export default function LoginForm() {
 
   function mudarTipo(e) {
     e.preventDefault()
-    
+
     if (type === 'password') {
       setType('text')
     } else {
@@ -31,7 +32,7 @@ export default function LoginForm() {
       <input
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        type="email"
+        type="text"
         className="form-control mb-3"
         placeholder="Email"
       />
@@ -45,14 +46,16 @@ export default function LoginForm() {
 
       <div className="form-control-check">
         <input type="checkbox" id="checkbox" />
-        <label className="form-label" for="checkbox">
+        <label className="form-label" htmlFor="checkbox">
           Remember for 30 days
         </label>
       </div>
 
       <button className="btn btn-dark">Log in</button>
       <hr />
-      <button className="btn" onClick={mudarTipo}>Forgot password</button>
+      <button className="btn" onClick={mudarTipo}>
+        Forgot password
+      </button>
     </form>
   )
 }
