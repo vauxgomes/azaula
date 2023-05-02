@@ -1,0 +1,14 @@
+/* Link list */
+
+.link-list {
+  display: grid;
+  gap: 1em;
+}
+
+.link-list li {
+  list-style: none;
+}
+
+.link-list a {
+  padding-left: 0;
+}

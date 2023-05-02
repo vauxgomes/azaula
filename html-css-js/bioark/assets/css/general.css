@@ -1,0 +1,61 @@
+/* Icon */
+
+.icon {
+  font-size: 1.25em;
+}
+
+.icon-lg {
+  font-size: 1.5em;
+}
+
+/* Flex */
+
+.flex-column {
+  flex-direction: column;
+}
+
+/* Spacing */
+
+.mb-sm {
+  margin-bottom: 0.25em;
+}
+
+.mb-md {
+  margin-bottom: 1em;
+}
+
+.mb-lg {
+  margin-bottom: 2em;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.px-md {
+  padding-inline: 1em !important;
+}
+
+.py-sm {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+/* Positioning */
+
+.position-relative {
+  position: relative;
+}
+
+/* Text */
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

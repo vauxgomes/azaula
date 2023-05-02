@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora&family=Playfair+Display&display=swap');
+@import url('./general.css');
+@import url('./topbar.css');
+@import url('./dropdown.css');
+@import url('./tabs.css');
+@import url('./lists.css');
+@import url('./submissions.css');
+@import url('./badges.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --topbar-height: 57px;
+
+  --border-color: rgba(242, 242, 242, 1);
+  --primary-color: #292929;
+  --secondary-color: rgba(117, 117, 117, 1);
+  --tertiary-color: #5c5b5b;
+
+  --bg-dark: #292929;
+  --bg-gray: #f5f5f5;
+  --bg-light-gray: #fafafa;
+}
+
+body {
+  color: var(--primary-color);
+  /* font-size: 16px; */
+  font-family: 'Lato', sans-serif;
+  background-color: #ffffff;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  outline: none;
+
+  transition: color 0.25s ease, border 0.25s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+/* Content */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr minmax(330px, 1fr);
+  grid-template-rows: 1fr min-content;
+  grid-template-areas:
+    'main aside'
+    'main footer';
+
+  height: calc(100vh - var(--topbar-height));
+  /* align-items: space-between; */
+  justify-content: space-evenly;
+
+  max-width: 1330px;
+  margin: 0 auto;
+
+  /* overflow-x: hidden; */
+}
+
+main {
+  grid-area: main;
+
+  padding: 2em;
+  border-right: 1px solid var(--border-color);
+}
+
+aside {
+  grid-area: aside;
+  padding: 2em;
+}
+
+footer {
+  grid-area: footer;
+
+  padding: 1em 2em;
+}
+
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+footer nav a {
+  padding: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  aside,
+  footer {
+    display: none;
+  }
+}
+
+::selection {
+  padding-inline: 0.5em;
+  color: #ffffff;
+  background: #000;
+}

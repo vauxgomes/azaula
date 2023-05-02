@@ -1,0 +1,83 @@
+/* Topbar */
+
+.topbar {
+  /* grid-area: topbar; */
+
+  display: grid;
+  grid-template-columns: min-content 1fr 2fr;
+  align-items: center;
+  gap: 1em;
+
+  height: 57px;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.topbar a {
+  padding: 0.5em;
+}
+
+/* Topbar: Logo */
+
+.topbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.topbar .logo span {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: 'Lora', serif;
+}
+
+/* Topbar: Profile Image */
+
+.topbar img.profile {
+  width: 36px;
+  /* height: 32px; */
+
+  border-radius: 50%;
+
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Topbar: Searchbar */
+
+.topbar .searchbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+
+  color: var(--secondary-color);
+
+  padding: 0.35em 1em;
+  background-color: var(--bg-gray);
+  border-radius: 20px;
+}
+
+.topbar .searchbar input {
+  color: inherit;
+  width: 100%;
+  background-color: inherit;
+  border: 0;
+  outline: none;
+}
+
+/* Topbar: Navigation */
+
+.topbar .menu {
+  justify-self: flex-end;
+
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.topbar .menu > a {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}

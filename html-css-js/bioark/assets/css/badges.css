@@ -1,0 +1,18 @@
+.badge {
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: 700;
+
+  padding: 2px;
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.badge-notification {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  border-radius: 50%;
+  outline: 5px solid inherit;
+}
