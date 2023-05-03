@@ -1,0 +1,32 @@
+#text-properties-example {
+  padding: 2em;
+}
+
+#text-properties-example form {
+  display: grid;
+  gap: 0.5em;
+  
+  margin: 2em 0;
+}
+
+#text-properties-example form div.single {
+  grid-column: 1/3;
+}
+
+#text-properties-example .container {
+  padding: 1em;
+
+  background-color: #eff1f3;
+  border-radius: 0.5em;
+}
+
+#text-properties-example .item {
+  padding: 2em;
+  background-color: #1651ce;
+  border-radius: 0.35em;
+}
+
+/* #text-properties-example .item:nth-child(1) {
+  padding: 2.5em 2em;
+} */
+

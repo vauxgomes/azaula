@@ -6,7 +6,8 @@ export default function TopBar() {
     <nav className="topbar">
       <NavLink to="/">Principal</NavLink>
       <NavLink to="/secondary">Secundária</NavLink>
-      
+      <NavLink to="/textproperties">Propriedadades de Texto</NavLink>
+
       <a>Sair</a>
     </nav>
   )

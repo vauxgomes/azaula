@@ -5,6 +5,8 @@ import LoginPage from './pages/LoginPage'
 import MainPage from './pages/MainPage'
 import SecondaryPage from './pages/SecondaryPage'
 
+import TextProperties from './pages/TextProperties'
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -13,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: '/secondary',
     element: <SecondaryPage />
+  },
+  {
+    path: '/textproperties',
+    element: <TextProperties />
   }
 ])
 
