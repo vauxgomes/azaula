@@ -1,0 +1,92 @@
+/* 900 x 200 */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 8px;
+  height: 200vh;
+
+  background-color: whitesmoke;
+  /* overflow: scroll; */
+}
+
+nav {
+  margin-bottom: 1em;
+}
+
+button {
+  cursor: pointer;
+  padding: 1em;
+  color: white;
+  background-color: #794a90;
+  border: None;
+  border-radius: 4px;
+}
+
+button.active {
+  background-color: #f69320;
+}
+
+.purple {
+  position: relative;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+
+  color: white;
+
+  min-height: 132px;
+  padding: 1em;
+  margin-bottom: 16px;
+  background-color: #794a90;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.orange {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2em;
+  background-color: #f69320;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  transition: all 0.3s ease;
+}
+
+.relative {
+  position: relative;
+  left: 30px;
+  top: 50px;
+}
+
+.fixed {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+
+.absolute {
+  position: absolute;
+  top: -10px;
+  left: 85%;
+}
+
+.sticky {
+  position: sticky;
+  top: 10px;
+  padding: 0.5em;
+}
