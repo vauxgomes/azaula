@@ -1,7 +1,7 @@
 import './style.css'
 import LoginForm from './components/LoginForm'
 
-export default function LoginPage({ setToken }) {
+export default function LoginPage() {
   return (
     <div id="login-page">
       <header className="logo">
@@ -21,7 +21,7 @@ export default function LoginPage({ setToken }) {
 
         <div className="text-divider">or</div>
 
-        <LoginForm setToken={setToken} />
+        <LoginForm />
       </main>
 
       <aside></aside>

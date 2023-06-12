@@ -1,5 +1,7 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import { Context } from './providers/context/context'
 
 import LoginPage from './pages/LoginPage'
 import MainPage from './pages/MainPage'
@@ -23,10 +25,10 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  const [token, setToken] = useState('')
+  const { token } = useContext(Context)
 
   if (!token) {
-    return <LoginPage setToken={setToken} />
+    return <LoginPage />
   }
 
   return <RouterProvider router={router} />
