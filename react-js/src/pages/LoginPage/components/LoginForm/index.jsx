@@ -1,7 +1,10 @@
 import './style.css'
-import { useState } from 'react'
+import { Context } from '../../../../providers/context/context'
+import { useContext, useState } from 'react'
 
-export default function LoginForm({ setToken }) {
+export default function LoginForm() {
+  const { setToken } = useContext(Context)
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [type, setType] = useState('password')
@@ -9,12 +12,20 @@ export default function LoginForm({ setToken }) {
   function handleSubmit(e) {
     e.preventDefault()
 
-    if (email && password) {
-      alert('Login feito com sucesso')
-      setToken('ok')
-    } else {
-      alert('Falha no login')
-    }
+    fetch('https://authorization.vauxgomes.repl.co/login', {
+      method: 'POST',
+      body: JSON.stringify({ username: email, password: password }),
+      headers: { 'Content-Type': 'application/json' }
+    })
+      .then((request) => request.json())
+      .then((response) => {
+        if (response.success) {
+          alert('Login feito com sucesso')
+          setToken(response.token)
+        } else {
+          alert(response.message)
+        }
+      })
   }
 
   function mudarTipo(e) {
